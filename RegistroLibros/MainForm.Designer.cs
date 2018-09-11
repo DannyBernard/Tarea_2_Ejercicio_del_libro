@@ -58,7 +58,7 @@
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -75,6 +75,7 @@
             this.lIstarToolStripMenuItem.Name = "lIstarToolStripMenuItem";
             this.lIstarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lIstarToolStripMenuItem.Text = "Listar";
+            this.lIstarToolStripMenuItem.Click += new System.EventHandler(this.lIstarToolStripMenuItem_Click);
             // 
             // MainForm
             // 

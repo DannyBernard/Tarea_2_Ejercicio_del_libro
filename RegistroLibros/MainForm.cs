@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroLibros.UI.Consulta;
+using System;
 using System.Windows.Forms;
 
 namespace RegistroLibros
@@ -16,6 +17,12 @@ namespace RegistroLibros
             registroLibros.Show();
 
 
+        }
+
+        private void lIstarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LibroConsulta consulta = new LibroConsulta();
+            consulta.Show();
         }
     }
 }

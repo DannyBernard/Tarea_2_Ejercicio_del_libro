@@ -29,7 +29,8 @@ namespace RegistroLibros.UI.Consulta
                 switch (FiltrocomboBox.SelectedItem)
                 {
                     case 0:
-                 listado = LibrosBll.
+                        listado = LibrosBll.GetList(p => true);
+                        break;
                 }
             }
 
