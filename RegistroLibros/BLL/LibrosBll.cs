@@ -10,7 +10,7 @@ using RegistroLibros.Entidades;
 
 namespace RegistroLibros.BLL
 {
-    class LibrosBll
+   public class LibrosBll
     {
         public static bool Guardar(Libros libros)
         {

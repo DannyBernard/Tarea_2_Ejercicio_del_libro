@@ -119,8 +119,9 @@ namespace RegistroLibros
             libros = LibrosBll.Buscar(id);
             if(libros != null)
             {
-                MessageBox.Show("Persona  Encotrada");
                 LlenaCampo(libros);
+                MessageBox.Show("Persona  Encotrada");
+             
 
             }
             else
@@ -133,30 +134,26 @@ namespace RegistroLibros
         private bool Validar()
         {
             bool paso = true;
-            if (NombretextBox.Text.Trim() == string.Empty|| DescripciontextBox.Text.Trim() ==string.Empty ||SiglatextBox.Text.Trim()== string.Empty||TipotextBox.Text.Trim() == string.Empty)
-            {
-             if(NombretextBox.Text.Trim()== string.Empty)
-                {
-                    errorProvider1.SetError(NombretextBox, "No dejar campo vacio");
-                    NombretextBox.Focus();
-                }
-             if(DescripciontextBox.Text.Trim() == string.Empty)
-                {
-                    errorProvider1.SetError(DescripciontextBox, "No dejar campo vacio");
-                    DescripciontextBox.Focus();
-                }
-             if(SiglatextBox.Text.Trim() == string.Empty)
-                {
-                    errorProvider1.SetError(SiglatextBox, "No dejar campo vacio");
-                    DescripciontextBox.Focus();
-                }
-                if (TipotextBox.Text.Trim() == string.Empty)
-                {
-                    errorProvider1.SetError(TipotextBox, "No dejar campo vacio");
-                }
-
+           
+            
+             if(string.IsNullOrWhiteSpace(TipotextBox.Text))
+                errorProvider1.SetError(TipotextBox, "No dejar campo vacio");
+                
+                
+             if(string.IsNullOrWhiteSpace(SiglatextBox.Text))
+                 errorProvider1.SetError(SiglatextBox, "No dejar campo vacio");
+                   
+                
+             if(string.IsNullOrWhiteSpace(DescripciontextBox.Text))
+              errorProvider1.SetError(DescripciontextBox, "No dejar campo vacio");
+                  
+                
+             if(string.IsNullOrWhiteSpace(NombretextBox.Text))
+              errorProvider1.SetError(NombretextBox, "No dejar campo vacio");
+                
+    
                 paso = false;
-            }
+            
             return paso;
         }
          
