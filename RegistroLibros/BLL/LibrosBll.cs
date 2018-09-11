@@ -90,6 +90,22 @@ namespace RegistroLibros.BLL
             }
             return libros;
         }
+        public static List<Libros> GetList(Expression<Func<Libros,bool>> expression)
+        {
+            List<Libros> Libros = new List<Libros>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                Libros = contexto.Libro.Where(expression).ToList();
+                contexto.Dispose();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Libros;
+        }
+        
 
     }
 }
